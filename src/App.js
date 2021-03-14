@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header.js'
+import Header from './components/Header.jsx'
+import ReviewContainer from './containers/ReviewContainer';
 
 class App extends React.Component {
   render(){
     return(
-      <Header/>
+      <>
+        <Header/>
+        <ReviewContainer/>
+      </>
     )
   }
 }
