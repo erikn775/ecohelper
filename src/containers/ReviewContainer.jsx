@@ -1,29 +1,28 @@
 import React from 'react';
+import ReviewCard from './ReviewCard.jsx'
 
 class ReviewContainer extends React.Component {
-
+    
     state = {
-        name: '',
-        content: ''
-    }
-
+        reviews: []
+        }
+    
+    
     componentDidMount(){
         fetch('http://127.0.0.1:3000/reviews')
             .then(response => response.json())
             .then(reviewData => {
-                debugger
+                this.setState({
+                    reviews: reviewData
+                })
             })
-    }
-
-    renderReviews = () => {
-        
     }
 
     render(){
         return(
             <>
-            <h3>testimonials</h3>
-            {this.renderReviews()}
+            <h2>Testimonials</h2>
+            {this.state.reviews.map(review => <ReviewCard name={review.name} content={review.content} created_at={review.created_at}/>)}
             </>
         )
     }
