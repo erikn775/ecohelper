@@ -5,6 +5,7 @@ import ReviewContainer from './containers/ReviewContainer.jsx';
 import TipsCarousel from'./containers/TipsCarousel.jsx'
 import {Switch, Route} from "react-router-dom";
 import HomeForm from './components/HomeForm.jsx'
+import HomeRecommendations from './components/HomeRecommendations';
 
 
 class App extends React.Component {
@@ -14,7 +15,8 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path="/" component={() => <><TipsCarousel/> <ReviewContainer/></>} />
-          <Route exact path="/new_home" component={() => <HomeForm/>}/>
+          <Route exact path="/home/new" component={() => <HomeForm/>}/>
+          <Route exact path="/home/recommendations" render={(props) => <HomeRecommendations {...props} />}/>
         </Switch>
           
       </div>

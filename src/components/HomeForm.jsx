@@ -1,5 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
+import HomeRecommendations from './HomeRecommendations.jsx'
 
 class HomeForm extends React.Component{
     
@@ -13,7 +14,9 @@ class HomeForm extends React.Component{
         lowFlow: false,
         windows: null,
         heater: null,
-        lightBulbs: null
+        lightBulbs: null,
+        redirect: false,
+        newId: null
     }
 
     onFormChange = (event) => {
@@ -26,25 +29,27 @@ class HomeForm extends React.Component{
         event.preventDefault();
         let configObj = {
             method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({home_info: this.state})
-        }
+        };
         fetch('http://127.0.0.1:3000/home_info', configObj)
         .then(response => response.json())
-        this.displayRecommendations()
-    }
-
-    displayRecommendations = () => {
-        let home = document.querySelector(".new-home-form")
-        home.style.display = 'none'
-        //<Recommendations email={this.state.email}/>
+        .then(data => this.setState({
+            redirect: true,
+            newId: data.id
+        }));
+        
     }
 
     render(){
-        
+        const redirect = this.state.redirect
+        if(redirect){
+            return <Redirect to={{
+                pathname: "/home/recommendations",
+                state: {email: this.state.newId}
+                }}
+            />
+        }
         return(
             <>
             <h2 className="home-form-title">Home Information</h2>
