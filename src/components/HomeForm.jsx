@@ -46,14 +46,14 @@ class HomeForm extends React.Component{
         if(redirect){
             return <Redirect to={{
                 pathname: "/home/recommendations",
-                state: {email: this.state.newId}
+                state: {newId: this.state.newId}
                 }}
             />
         }
         return(
             <>
             <h2 className="home-form-title">Home Information</h2>
-            <form onSubmit={this.formSubmit} className="new-home-form" display="block">
+            <form onSubmit={this.formSubmit} className="new-home-form">
                 <input onChange={this.onFormChange} className="home-name" name="name" type="text" placeholder="Enter Name..."/><br/>
                 <input onChange={this.onFormChange} className="home-email" name="email" type="text" placeholder="Enter Email..."/><br/>
                 <select onChange={this.onFormChange} className="home-type" name="typeOfHome">
