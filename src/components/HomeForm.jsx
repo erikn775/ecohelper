@@ -1,7 +1,8 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
 
 class HomeForm extends React.Component{
-
+    
     state = {
         name: null,
         email: null,
@@ -12,8 +13,7 @@ class HomeForm extends React.Component{
         lowFlow: false,
         windows: null,
         heater: null,
-        lightBulbs: null,
-        redirect: false
+        lightBulbs: null
     }
 
     onFormChange = (event) => {
@@ -32,22 +32,23 @@ class HomeForm extends React.Component{
             },
             body: JSON.stringify({home_info: this.state})
         }
-        fetch('http://127.0.0.1:3000/home_infos', configObj)
+        fetch('http://127.0.0.1:3000/home_info', configObj)
         .then(response => response.json())
-        .then(homeData => {
-            this.setState({redirect: true})
-        })
+        this.displayRecommendations()
+    }
+
+    displayRecommendations = () => {
+        let home = document.querySelector(".new-home-form")
+        home.style.display = 'none'
+        //<Recommendations email={this.state.email}/>
     }
 
     render(){
-        const redirect = this.state.redirect
-        if(redirect){
-            return <Redirect to="/"/>
-        }
+        
         return(
             <>
-            <h2>Home Information</h2>
-            <form onSubmit={this.formSubmit} className="new-home-form">
+            <h2 className="home-form-title">Home Information</h2>
+            <form onSubmit={this.formSubmit} className="new-home-form" display="block">
                 <input onChange={this.onFormChange} className="home-name" name="name" type="text" placeholder="Enter Name..."/><br/>
                 <input onChange={this.onFormChange} className="home-email" name="email" type="text" placeholder="Enter Email..."/><br/>
                 <select onChange={this.onFormChange} className="home-type" name="typeOfHome">
@@ -93,7 +94,8 @@ class HomeForm extends React.Component{
                     <option value="led">LED Bulbs</option>
                     <option value="fluorescent">Fluorescent Bulbs</option>
                     <option value="incandescent">Incandescent Bulbs</option>
-                </select>
+                </select><br/>
+                <input className="home-submit" name="submit" type="submit" value="See Recommendations"/>
             </form>
             </>
         )
