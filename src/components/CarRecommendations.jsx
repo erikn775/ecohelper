@@ -1,10 +1,9 @@
 import React from 'react';
 
-class HomeRecommendations extends React.Component{
-
+class CarRecommendations extends React.Component{
     componentDidMount(){
         let user_id = this.props.location.state.newId
-        fetch(`http://127.0.0.1:3000/home_info/${user_id}`)
+        fetch(`http://127.0.0.1:3000/car_info/${user_id}`)
         .then(response => response.json())
         .then(data => console.log(data))
     }
@@ -17,4 +16,4 @@ class HomeRecommendations extends React.Component{
         )
     }
 }
-export default HomeRecommendations
+export default CarRecommendations;
