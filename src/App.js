@@ -7,7 +7,7 @@ import {Switch, Route} from "react-router-dom";
 import HomeForm from './components/HomeForm.jsx'
 import HomeRecommendations from './components/HomeRecommendations';
 import CarForm from './components/CarForm.jsx'
-
+import Buttons from './components/Buttons.jsx'
 
 class App extends React.Component {
   render(){
@@ -15,7 +15,7 @@ class App extends React.Component {
       <div className="app">
         <Header/>
         <Switch>
-          <Route exact path="/" component={() => <><TipsCarousel/> <ReviewContainer/></>} />
+          <Route exact path="/" component={() => <><Buttons/> <TipsCarousel/> <ReviewContainer/></>} />
           <Route exact path="/home/new" component={() => <HomeForm/>}/>
           <Route exact path="/home/recommendations" render={(props) => <HomeRecommendations {...props} />}/>
           <Route exact path="/car/new" component={() => <CarForm/>}/>
