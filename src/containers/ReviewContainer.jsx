@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewCard from './ReviewCard.jsx'
+import '../ReviewCard.css'
 
 class ReviewContainer extends React.Component {
     
@@ -21,7 +22,7 @@ class ReviewContainer extends React.Component {
     render(){
         return(
             <>
-            <h2>Testimonials</h2>
+            <h2 className="review-header">Testimonials</h2>
             {this.state.reviews.map(review => <ReviewCard key={review.id} name={review.name} content={review.content} created_at={review.created_at}/>)}
             </>
         )
