@@ -2,8 +2,6 @@ import React from 'react'
 import '../ReviewCard.css'
 
 class ReviewCard extends React.Component{
-
-
     render(){
         return(
             <div className="review-container">
