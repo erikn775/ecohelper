@@ -1,5 +1,6 @@
 import React from 'react';
 import ElectricCar from './ElectricCar.jsx'
+import HybridCar from './HybridCar.jsx'
 import '../electric.css'
 
 
@@ -15,7 +16,7 @@ class CarRecommendations extends React.Component{
 
     componentDidMount(){
         //let user_id = this.props.location.state.newId
-        fetch(`http://127.0.0.1:3000/car_info/1`)
+        fetch(`http://127.0.0.1:3000/car_info/3`)
         .then(response => response.json())
         .then(data => {
             this.setState({
@@ -34,7 +35,7 @@ class CarRecommendations extends React.Component{
             //component here
         }
         else if(this.state.chargeAtHome === false){
-            //component here
+            return <HybridCar/>
         }
         else{
             return <ElectricCar/>
