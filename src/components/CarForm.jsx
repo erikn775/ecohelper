@@ -39,7 +39,6 @@ class CarForm extends React.Component{
 
     render(){
         const redirect = this.state.redirect
-        const ownCar = this.state.ownACar
         if(redirect){
             return <Redirect to={{
                 pathname: "/car/recommendations",
