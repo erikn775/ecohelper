@@ -23,7 +23,7 @@ class ReviewContainer extends React.Component {
         return(
             <>
             <h2 className="review-header">Testimonials</h2>
-            {this.state.reviews.map(review => <ReviewCard key={review.id} name={review.name} content={review.content} created_at={review.created_at}/>)}
+            {this.state.reviews.map(review => <ReviewCard key={review.id} name={review.name} content={review.content} rating={review.rating}/>)}
             </>
         )
     }

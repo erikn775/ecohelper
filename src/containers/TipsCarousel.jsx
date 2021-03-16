@@ -1,5 +1,4 @@
 import React from 'react';
-import TipsCard from './TipsCard.jsx';
 import { Carousel } from 'rsuite';
 import '../tips.css'
 
