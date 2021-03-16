@@ -1,5 +1,7 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
+import {Form, Button} from 'react-bootstrap';
+import '../form.css'
 import HomeRecommendations from './HomeRecommendations.jsx'
 
 class HomeForm extends React.Component{
@@ -51,58 +53,138 @@ class HomeForm extends React.Component{
             />
         }
         return(
-            <>
-            <h2 className="home-form-title">Home Information</h2>
-            <form onSubmit={this.formSubmit} className="new-home-form">
-                <input onChange={this.onFormChange} className="home-name" name="name" type="text" placeholder="Enter Name..."/><br/>
-                <input onChange={this.onFormChange} className="home-email" name="email" type="text" placeholder="Enter Email..."/><br/>
-                <select onChange={this.onFormChange} className="home-type" name="typeOfHome">
-                    <option value="">Type of home...</option>
+            <div className="new-form">
+            <h3 className="home-form-title">Home Sustainability Helper</h3>
+            <Form onSubmit={this.formSubmit}>
+            <Form.Group controlId="home-name">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control onChange={this.onFormChange} name="name" type="text" />
+                </Form.Group>
+                <Form.Group controlId="home-email">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control onChange={this.onFormChange} name="email" type="text" />
+                </Form.Group>
+                <Form.Group controlId="home-type">
+                    <Form.Label>Type of Home</Form.Label>
+                    <Form.Control as="select" onChange={this.onFormChange} name="typeOfHome">
+                        <option value="">Please Select...</option>
+                        <option value="condo">Condo</option>
+                        <option value="townhouse">Townhouse</option>
+                        <option value="detached house">Detached House</option>
+                    </Form.Control>
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Solar Panels?</Form.Label>
+                    <Form.Control as="select" onChange={this.onFormChange} name="solars">
+                        <option value="">Please Select...</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </Form.Control>
+                </Form.Group>
+                <Form.Group controlId="home-water-heater">
+                    <Form.Label>Type of Water Heater</Form.Label>
+                    <Form.Control as="select" onChange={this.onFormChange} name="waterHeater">
+                        <option value="">Please Select...</option>
+                        <option value="tank_natural_gas">Natural Gas Tank</option>
+                        <option value="tank_electric">Electric Tank</option>
+                        <option value="tankless_natural_gas">Tankless Natural Gas</option>
+                        <option value="heat_pump">Hybrid(Heat Pump)</option>
+                    </Form.Control>
+                </Form.Group>
+                <Form.Group controlId="home-applicances">
+                    <Form.Label>Age of Applicances</Form.Label>
+                    <Form.Control onChange={this.onFormChange} name="appliances" type="text"/>
+                </Form.Group>
+                <Form.Group controlId="home-flow">
+                    <Form.Label>Low Flow Water Fixtures</Form.Label>
+                    <Form.Control as="select" onChange={this.onFormChange} name="lowFlow">
+                        <option value="">Please Select...</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </Form.Control>   
+                </Form.Group>
+                <Form.Group controlId="home-windows">
+                    <Form.Label>Type of Windows</Form.Label>
+                    <Form.Control as="select" onChange={this.onFormChange} name="windows">
+                        <option value="">Please Select...</option>
+                        <option value="single_pane">Single Pane</option>
+                        <option value="double_pane">Double Pane</option>
+                        <option value="triple_pane">Triple Pane</option>
+                    </Form.Control>
+                </Form.Group>
+                <Form.Group controlId="home-heater">
+                    <Form.Label>Type of Heater</Form.Label>
+                    <Form.Control as="select" onChange={this.onFormChange} name="heater">
+                        <option value="">Please Select...</option>
+                        <option value="baseboard">Baseboard Heater</option>
+                        <option value="natural_gas_furnace">Natural Gas Heater</option>
+                        <option value="heat_pump">Heat Pump Heater</option>
+                        <option value="mini_split">Mini Split Heater</option>
+                        <option value="geothermal">Geo Thermal Heater</option>
+                    </Form.Control>
+                </Form.Group>
+                <Form.Group controlId="home-lights">
+                    <Form.Label>Type of Lights</Form.Label>
+                    <Form.Control as="select" onChange={this.onFormChange} name="lightBulbs">
+                        <option value="">Please Select...</option>
+                        <option value="led">LED Bulbs</option>
+                        <option value="fluorescent">Fluorescent Bulbs</option>
+                        <option value="incandescent">Incandescent Bulbs</option>
+                    </Form.Control>
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    See Recommendations
+                </Button>
+            </Form>
+                {/* <input onChange={this.onFormChange} className="home-name" name="name" type="text" placeholder="Enter Name..."/><br/>
+                <input onChange={this.onFormChange} className="home-email" name="email" type="text" placeholder="Enter Email..."/><br/> */}
+                {/* <select onChange={this.onFormChange} className="home-type" name="typeOfHome">
+                    <option value="">Please Select...</option>
                     <option value="condo">Condo</option>
                     <option value="townhouse">Townhouse</option>
                     <option value="detached house">Detached House</option>
-                </select><br/>
-                <select onChange={this.onFormChange} className="home-solar" name="solars">
+                </select><br/> */}
+                {/* <select onChange={this.onFormChange} className="home-solar" name="solars">
                     <option value="">Solar Panels?</option>
                     <option value="true">Yes</option>
                     <option value="false">No</option>
-                </select><br/>
-                <select onChange={this.onFormChange} className="home-water-heater" name="waterHeater">
+                </select><br/> */}
+                {/* <select onChange={this.onFormChange} className="home-water-heater" name="waterHeater">
                     <option value="">Type of Water Heater...</option>
                     <option value="tank_natural_gas">Natural Gas Tank</option>
                     <option value="tank_electric">Electric Tank</option>
                     <option value="tankless_natural_gas">Tankless Natural Gas</option>
                     <option value="heat_pump">Hybrid(Heat Pump)</option>
-                </select><br/>
-                <input onChange={this.onFormChange} className="home-applicances" name="appliances" type="text" placeholder="Applicances Age..."/><br/>
-                <select onChange={this.onFormChange} className="home-flow" name="lowFlow">
+                </select><br/> */}
+                {/* <input onChange={this.onFormChange} className="home-applicances" name="appliances" type="text" placeholder="Applicances Age..."/><br/> */}
+                {/* <select onChange={this.onFormChange} className="home-flow" name="lowFlow">
                     <option value="">Low Flow Water Fixtures...</option>
                     <option value="true">Yes</option>
                     <option value="false">No</option>
-                </select><br/>
-                <select onChange={this.onFormChange} className="home-windows" name="windows">
+                </select><br/> */}
+                {/* <select onChange={this.onFormChange} className="home-windows" name="windows">
                     <option value="">Type of Windows...</option>
                     <option value="single_pane">Single Pane</option>
                     <option value="double_pane">Double Pane</option>
                     <option value="triple_pane">Triple Pane</option>
-                </select><br/>
-                <select onChange={this.onFormChange} className="home-heater" name="heater">
+                </select><br/> */}
+                {/* <select onChange={this.onFormChange} className="home-heater" name="heater">
                     <option value="">Type of Heater...</option>
                     <option value="baseboard">Baseboard Heater</option>
                     <option value="natural_gas_furnace">Natural Gas Heater</option>
                     <option value="heat_pump">Heat Pump Heater</option>
                     <option value="mini_split">Mini Split Heater</option>
                     <option value="geothermal">Geo Thermal Heater</option>
-                </select><br/>
-                <select onChange={this.onFormChange} className="home-lights" name="lightBulbs">
+                </select><br/> */}
+                {/* <select onChange={this.onFormChange} className="home-lights" name="lightBulbs">
                     <option value="">Home Lighting...</option>
                     <option value="led">LED Bulbs</option>
                     <option value="fluorescent">Fluorescent Bulbs</option>
                     <option value="incandescent">Incandescent Bulbs</option>
-                </select><br/>
-                <input className="home-submit" name="submit" type="submit" value="See Recommendations"/>
-            </form>
-            </>
+                </select><br/> */}
+                {/* <input className="home-submit" name="submit" type="submit" value="See Recommendations"/>
+            </form> */}
+            </div>
         )
     }
 }

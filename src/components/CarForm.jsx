@@ -3,7 +3,7 @@ import {Redirect} from 'react-router-dom'
 //import { Form, FormGroup, FormControl, ControlLabel, HelpBlock, Button, ButtonToolbar, Dropdown } from 'rsuite';
 import {Form, Button} from 'react-bootstrap';
 import 'rsuite/dist/styles/rsuite-default.css';
-import '../carform.css'
+import '../form.css'
 
 
 class CarForm extends React.Component{
@@ -79,9 +79,9 @@ class CarForm extends React.Component{
         //     </>
         // )
         return(
-            <div className="new-car-form">
+            <div className="new-form">
                 <h3>Car Sustainability Helper</h3>
-            <Form>
+            <Form onSubmit={this.formSubmit}>
                 <Form.Group controlId="car-name">
                     <Form.Label>Name</Form.Label>
                     <Form.Control onChange={this.onFormChange} name="name" type="text" />
