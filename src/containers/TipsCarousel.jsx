@@ -1,5 +1,7 @@
 import React from 'react';
 import TipsCard from './TipsCard.jsx';
+import { Carousel } from 'rsuite';
+import '../tips.css'
 
 class TipsCarousel extends React.Component {
     state = {
@@ -16,16 +18,13 @@ class TipsCarousel extends React.Component {
             })
     }
 
-    displayTips = () => {
-        const desplayedTip = 
-        this.state.tips.map(tip => <TipsCard key={tip.id} tips={tip.content}/>)
-    }
-
     render(){
         return(
             <>
-            <h3>Eco Tips</h3>
-
+            <Carousel autoplay className="custom-slider">
+                {this.state.tips.map(tip => 
+                    <img src={tip.content} /> )}
+            </Carousel>
             </>
         )
     }
