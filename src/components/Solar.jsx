@@ -21,8 +21,13 @@ class Solar extends React.Component{
         })
     }
 
-    addToList = () => {
-        
+    addToList = (event) => {
+        if(event.target.parentElement.className === 'solar-container'){
+            event.target.parentElement.style = 'border-style: solid; border-color: lightgreen; border-width: 5px;';
+        }
+        if(event.target.className === 'solar-container'){
+            event.target.style = 'border-style: solid; border-color: lightgreen; border-width: 5px;'
+        }
     }
 
     render(){
