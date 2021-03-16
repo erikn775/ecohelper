@@ -1,5 +1,5 @@
 import React from 'react';
-import Solar from './Solar.jsx'
+
 
 class CarRecommendations extends React.Component{
 
@@ -15,7 +15,7 @@ class CarRecommendations extends React.Component{
     render(){
         return(
             <div>
-                <Solar/>
+                
             </div>
         )
     }

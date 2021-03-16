@@ -1,4 +1,6 @@
 import React from 'react';
+import Solar from './Solar.jsx'
+import Heater from './Heater.jsx'
 
 class HomeRecommendations extends React.Component{
 
@@ -12,7 +14,12 @@ class HomeRecommendations extends React.Component{
         return(
             
             <div>
-                <h1>I'm working </h1>
+                <Solar unit={1}/>
+                <Heater unit={1}/>
+                <Solar unit={2}/>
+                <Heater unit={2}/>
+                <Solar unit={3}/>
+                <Solar unit={4}/>
             </div>
         )
     }

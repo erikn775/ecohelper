@@ -42,7 +42,7 @@ class CarForm extends React.Component{
         const ownCar = this.state.ownACar
         if(redirect){
             return <Redirect to={{
-                pathname: "/home/recommendations",
+                pathname: "/car/recommendations",
                 state: {newId: this.state.newId}
                 }}
             />
@@ -73,6 +73,7 @@ class CarForm extends React.Component{
                         <option value="true">Yes</option>
                         <option value="false">No</option>
                     </select><br/>
+                    <input className="car-submit" name="submit" type="submit" value="See Recommendations"/>
                 </form>
             </>
         )

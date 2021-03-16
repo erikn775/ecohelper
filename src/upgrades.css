@@ -4,8 +4,8 @@
     margin: 10px;
     text-align: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 25%;
-    height: 25%;
+    width: 300px;
+    height: 100px;
     float: right;
 }
 
@@ -21,3 +21,28 @@
 .solar-title {
     font-size: 20px;
 }
+
+.heater-container {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 300px;
+    height: 100px;
+    float: right;
+}
+
+.heater-container:hover {
+    border-style: solid;
+    border-color: lightgreen;
+    border-width: 5px;
+    cursor: pointer;
+}
+
+
+
+.heater-title {
+    font-size: 20px;
+}
+
