@@ -1,5 +1,8 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom'
+import { Form, FormGroup, FormControl, ControlLabel, HelpBlock, Button, ButtonToolbar, Dropdown } from 'rsuite';
+import 'rsuite/dist/styles/rsuite-default.css';
+
 
 class CarForm extends React.Component{
     state ={
@@ -32,15 +35,6 @@ class CarForm extends React.Component{
             redirect: true,
             newId: data.id
         }));
-    }
-
-    ownCar = () => {
-        if(this.state.ownACar === true){
-            <>
-            {console.log('hello')}
-            
-            </>
-        }
     }
 
     render(){
@@ -82,6 +76,52 @@ class CarForm extends React.Component{
                 </form>
             </>
         )
+        // return(
+        //     <Form>
+        //         <FormGroup>
+        //             <ControlLabel>Name</ControlLabel>
+        //             <FormControl as="input" onChange={this.onFormChange} className="car-name" name="name" />
+        //             <HelpBlock>Required</HelpBlock>
+        //         </FormGroup>
+        //         <FormGroup>
+        //             <ControlLabel>Email</ControlLabel>
+        //             <FormControl onChange={this.onFormChange} className="car-email" name="email" type="text" />
+        //             <HelpBlock tooltip>Required</HelpBlock>
+        //         </FormGroup>
+        //         <FormGroup>
+        //             <Dropdown onChange={this.onFormChange} title="Do you own a car?" className="car-ownership" name="ownACar">
+        //                 <Dropdown.Item value="true">Yes</Dropdown.Item>
+        //                 <Dropdown.Item value="false">No</Dropdown.Item>
+        //             </Dropdown>
+        //         </FormGroup>
+        //         <FormGroup>
+        //             <Dropdown onChange={this.onFormChange} title="Car Type" className="car-type" name="typeOfCar">
+        //                 <Dropdown.Item value="midsize_suv">Midsize SUV</Dropdown.Item>
+        //                 <Dropdown.Item value="large_suv">Large SUV</Dropdown.Item>
+        //                 <Dropdown.Item value="truck">Truck</Dropdown.Item>
+        //                 <Dropdown.Item value="compact_car">Compact Car</Dropdown.Item>
+        //                 <Dropdown.Item value="midsize_car">Midsize Car</Dropdown.Item>
+        //                 <Dropdown.Item value="electric">Electric Car</Dropdown.Item>
+        //             </Dropdown>
+        //         </FormGroup>
+        //         <FormGroup>
+        //             <ControlLabel>Car Mpg</ControlLabel>
+        //             <FormControl onChange={this.onFormChange} className="car-mpg" name="mpg" type="text" />
+        //         </FormGroup>
+        //         <FormGroup>
+        //             <Dropdown onChange={this.onFormChange} title="Ability to charge car at home?" className="car-charge" name="chargeAtHome">
+        //                 <Dropdown.Item value="true">Yes</Dropdown.Item>
+        //                 <Dropdown.Item value="false">No</Dropdown.Item>
+        //             </Dropdown>
+        //         </FormGroup>
+        //         <FormGroup>
+        //         <ButtonToolbar>
+        //             <Button appearance="primary">Submit</Button>
+        //             <Button appearance="default">Cancel</Button>
+        //         </ButtonToolbar>
+        //         </FormGroup>
+        //     </Form>
+        // )
     }
 }
 export default CarForm

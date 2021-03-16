@@ -1,8 +1,9 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import { Nav, Icon } from 'rsuite';
+import { Nav, Icon, ButtonToolbar, Button } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
+import '../button.css'
 
 class Buttons extends React.Component{
 
@@ -16,10 +17,14 @@ class Buttons extends React.Component{
             //         <Nav.Link href="/home/new">Home Sustainability Helper</Nav.Link>
             //     </Nav.Item>
             // </Nav>
-            <>
-            <NavLink to="/car/new">Car Sustainability Helper</NavLink><br/>
-            <NavLink to="/home/new">Home Sustainability Helper</NavLink>
-            </>
+            // <>
+            // <NavLink to="/car/new">Car Sustainability Helper</NavLink><br/>
+            // <NavLink to="/home/new">Home Sustainability Helper</NavLink>
+            // </>
+            <ButtonToolbar className="helper-buttons">
+                <Button href="/home/new" appearance="primary">Home Sustainability Helper</Button>
+                <Button href="/car/new" appearance="primary">Car Sustainability Helper</Button>
+            </ButtonToolbar>
         )
     }
 }
