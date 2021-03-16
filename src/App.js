@@ -15,7 +15,7 @@ class App extends React.Component {
       <div className="app">
         <Header/>
         <Switch>
-          <Route exact path="/" component={() => <><Buttons/> <TipsCarousel/> <ReviewContainer/></>} />
+          <Route exact path="/" component={() => <><Buttons/><br/><TipsCarousel/><br/><ReviewContainer/></>} />
           <Route exact path="/home/new" component={() => <HomeForm/>}/>
           <Route exact path="/home/recommendations" render={(props) => <HomeRecommendations {...props} />}/>
           <Route exact path="/car/new" component={() => <CarForm/>}/>
