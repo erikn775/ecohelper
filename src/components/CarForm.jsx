@@ -80,7 +80,7 @@ class CarForm extends React.Component{
         //     <Form>
         //         <FormGroup>
         //             <ControlLabel>Name</ControlLabel>
-        //             <FormControl as="input" onChange={this.onFormChange} className="car-name" name="name" />
+        //             <FormControl as="input" onChange={(event) => this.onFormChange(event)} className="car-name" name="name" />
         //             <HelpBlock>Required</HelpBlock>
         //         </FormGroup>
         //         <FormGroup>
