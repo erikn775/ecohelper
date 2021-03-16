@@ -48,7 +48,7 @@ class CarForm extends React.Component{
         }
         return(
             <>
-                <h2 className="car-form-title"></h2>
+                <h2 className="car-form-title">Car Information</h2>
                 <form onSubmit={this.formSubmit} className="car-form">
                     <input onChange={this.onFormChange} className="car-name" name="name" type="text" placeholder="Enter Name..."/><br/>
                     <input onChange={this.onFormChange} className="car-email" name="email" type="text" placeholder="Enter Email..."/><br/>
