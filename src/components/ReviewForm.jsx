@@ -13,7 +13,6 @@ class ReviewForm extends React.Component{
     }
 
     onFormChange = (event) => {
-        debugger
         const data = {...this.state}
         data[event.target.name] = event.target.value
         this.setState(data)
@@ -41,11 +40,11 @@ class ReviewForm extends React.Component{
 
         return(
             <div className="review-form">
-            <h3>Leave us a Review</h3>
+            <h3 className="review-form-title">Leave us a Review</h3>
             <Form onSubmit={this.formSubmit}>
                 <Form.Group controlId="review-name">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control onChange={this.onFormChange} name="name" type="text" placeholder="Name..." />
+                    <Form.Control onChange={this.onFormChange} name="name" type="text" />
                 </Form.Group>
                 <Form.Group controlId="review-rating">
                 <Form.Label>Rating</Form.Label>
@@ -60,7 +59,7 @@ class ReviewForm extends React.Component{
                 </Form.Group>
                 <Form.Group controlId="review-name">
                     <Form.Label>Review</Form.Label>
-                    <Form.Control as="textarea" onChange={this.onFormChange} name="content" type="text" placeholder="Name..." />
+                    <Form.Control as="textarea" onChange={this.onFormChange} name="content" type="text" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Submit
