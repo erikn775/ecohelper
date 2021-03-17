@@ -2,7 +2,10 @@ import React from 'react';
 import Solar from './Solar.jsx'
 import Heater from './Heater.jsx'
 import WaterHeater from './WaterHeater.jsx'
+import { connect } from 'react-redux'
+import {addCost, subCost} from '../actions/upgradesActions.jsx'
 import '../Home.css'
+import DisplayTotal from './DisplayTotal.jsx';
 
 class HomeRecommendations extends React.Component{
 
@@ -12,13 +15,16 @@ class HomeRecommendations extends React.Component{
         .then(response => response.json())
         .then(data => console.log(data))
     }
+
+    
+
     render(){
         return(
-            
             <div>
                 <div className="robot">
                     <h3>Hello! </h3>
                     <h3>Our robots have spoken!</h3>
+                    <DisplayTotal/>
                 </div>
                 <div className="home-recommendation">
                     <h3 className="home-recommendation-title">Recommendations</h3>
@@ -36,4 +42,12 @@ class HomeRecommendations extends React.Component{
         )
     }
 }
-export default HomeRecommendations
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+    addCost: () => dispatch(addCost()),
+    subCost: () => dispatch(subCost())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(HomeRecommendations)
