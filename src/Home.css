@@ -1,0 +1,16 @@
+.robot {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.home-recommendation-title {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.home-recommendation-content {
+    text-align: center;
+}
