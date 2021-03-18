@@ -36,8 +36,10 @@ class Solar extends React.Component{
     }
 
     render(){
+        const cost = this.state.cost;
+        const savings = this.state.savings;
         return(
-            <div onClick={() => this.props.dispatch({type: "MORE_MONEY", payload: {cost: this.state.cost, savings: this.state.savings}})} className="solar-container">
+            <div onClick={() => this.props.addCost(cost, savings)} className="solar-container">
                 <h3 className="solar-title">{this.state.size} Solar Panel System</h3>
                 <p>Cost: ${this.state.cost} Potential Savings: ${this.state.savings}</p>
             </div>
@@ -45,13 +47,13 @@ class Solar extends React.Component{
     }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         addCost: () => dispatch(addCost()),
-//         subCost: () => dispatch(subCost())
-//         }
-//   }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addCost: (cost, savings) => dispatch(addCost(cost, savings)),
+        subCost: () => dispatch(subCost())
+        }
+  }
 
-export default connect()(Solar);
+export default connect(null, mapDispatchToProps)(Solar);
 
 //() => this.props.dispatch({type: "MORE_MONEY", payload: {cost: this.state.cost, savings: this.state.savings}})
