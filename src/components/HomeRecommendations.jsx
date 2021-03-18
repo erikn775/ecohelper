@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import {addCost, subCost} from '../actions/upgradesActions.jsx'
 import '../Home.css'
 import DisplayTotal from './DisplayTotal.jsx';
+import LightBulbs from './LightBulbs.jsx'
 
 class HomeRecommendations extends React.Component{
 
@@ -37,17 +38,11 @@ class HomeRecommendations extends React.Component{
                     <Solar unit={4}/>
                     <WaterHeater unit={1}/>
                     <WaterHeater unit={3}/>
+                    <LightBulbs unit={1}/>
                 </div>
             </div>
         )
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-    addCost: () => dispatch(addCost()),
-    subCost: () => dispatch(subCost())
-    }
-}
-
-export default connect(null, mapDispatchToProps)(HomeRecommendations)
+export default connect()(HomeRecommendations)
