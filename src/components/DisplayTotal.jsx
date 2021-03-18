@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 function DisplayTotal(props) {
   return (
     <div>
-      <h2>Estimated Total Cost: ${props.totalCost}. Potential Lifetime Savings: ${props.totalSavings}</h2>
+      <h2>Estimated Total Cost: ${props.totalCost}. Potential 25 Year Savings: ${props.totalSavings}</h2>
     </div>
   );
 }

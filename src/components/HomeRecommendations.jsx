@@ -7,6 +7,7 @@ import {addCost, subCost} from '../actions/upgradesActions.jsx'
 import '../Home.css'
 import DisplayTotal from './DisplayTotal.jsx';
 import LightBulbs from './LightBulbs.jsx'
+import Windows from './Windows.jsx'
 
 class HomeRecommendations extends React.Component{
 
@@ -39,6 +40,8 @@ class HomeRecommendations extends React.Component{
                     <WaterHeater unit={1}/>
                     <WaterHeater unit={3}/>
                     <LightBulbs unit={1}/>
+                    <Windows unit={1}/>
+                    <Windows unit={2}/>
                 </div>
             </div>
         )
