@@ -1,5 +1,7 @@
 import React from 'react';
-import '../upgrades.css'
+import '../upgrades.css';
+import { connect } from 'react-redux'
+import {addCost, subCost} from '../actions/upgradesActions.jsx'
 //import {addSolar} from './actions/upgradesActions.jsx'
 
 class Heater extends React.Component{
@@ -22,7 +24,12 @@ class Heater extends React.Component{
         })
     }
 
-    addToList = (event) => {
+    addToCost = (event) => {
+        this.setState({clicked: true})
+        const cost = this.state.cost;
+        const savings = this.state.savings;
+        this.props.addCost(cost, savings)
+
         if(event.target.parentElement.className === 'heater-container'){
             event.target.parentElement.style = 'border-style: solid; border-color: lightgreen; border-width: 5px;';
         }
@@ -31,13 +38,36 @@ class Heater extends React.Component{
         }
     }
 
+    subtractCost = (event) => {
+        this.setState({clicked: false})
+        const cost = this.state.cost;
+        const savings = this.state.savings;
+        this.props.subCost(cost, savings)
+
+        if(event.target.parentElement.className === 'heater-container'){
+            event.target.parentElement.style = 'border-style: none; border-color: none; border-width: none;';
+        }
+        if(event.target.className === 'heater-container'){
+            event.target.style = 'border-style: none; border-color: none; border-width: none;'
+        }
+    }
+
     render(){
+        let clicked = this.state.clicked
         return(
-            <div onClick={this.addToList} className="heater-container">
+            <div onClick={clicked ? this.subtractCost : this.addToCost} className="heater-container">
                 <h3 className="heater-title">{this.state.heaterType} heater</h3>
                 <p>Cost: ${this.state.cost} Potential Savings: ${this.state.savings}</p>
             </div>
         )
     }
 }
-export default Heater;
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addCost: (cost, savings) => dispatch(addCost(cost, savings)),
+        subCost: (cost, savings) => dispatch(subCost(cost, savings))
+        }
+  }
+
+export default connect(null, mapDispatchToProps)(Heater);
