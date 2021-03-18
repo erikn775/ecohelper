@@ -8,6 +8,8 @@ import '../Home.css'
 import DisplayTotal from './DisplayTotal.jsx';
 import LightBulbs from './LightBulbs.jsx'
 import Windows from './Windows.jsx'
+import Appliances from './Appliances.jsx'
+import LowFlow from './LowFlow.jsx'
 
 class HomeRecommendations extends React.Component{
 
@@ -42,6 +44,8 @@ class HomeRecommendations extends React.Component{
                     <LightBulbs unit={1}/>
                     <Windows unit={1}/>
                     <Windows unit={2}/>
+                    <Appliances unit={1}/>
+                    <LowFlow unit={1}/>
                 </div>
             </div>
         )
