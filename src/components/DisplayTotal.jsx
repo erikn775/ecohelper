@@ -12,14 +12,10 @@ function DisplayTotal(props) {
 }
 
 const mapStateToProps = (state) => {
-  //console.log(state)
   return {
     totalCost: state.totalCost,
     totalSavings: state.totalSavings
   }
 }
 
-
 export default connect(mapStateToProps)(DisplayTotal);
-// export default connect(firstArg, secondArg)(DisplayTotal)
-// export default DisplayTotal

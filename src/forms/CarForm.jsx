@@ -48,36 +48,6 @@ class CarForm extends React.Component{
                 }}
             />
         }
-        // return(
-        //     <>
-        //         <h2 className="car-form-title">Car Information</h2>
-        //         <form onSubmit={this.formSubmit} className="car-form">
-        //             <input onChange={this.onFormChange} className="car-name" name="name" type="text" placeholder="Enter Name..."/><br/>
-        //             <input onChange={this.onFormChange} className="car-email" name="email" type="text" placeholder="Enter Email..."/><br/>
-        //             <select onChange={this.onFormChange} className="car-ownership" name="ownACar">
-        //                 <option value="">Do you own a car?</option>
-        //                 <option value="true">Yes</option>
-        //                 <option value="false">No</option>
-        //             </select><br/>
-        //             <select onChange={this.onFormChange} className="car-type" name="typeOfCar">
-        //                 <option value="">Type of Car</option>
-        //                 <option value="midsize_suv">Midsize SUV</option>
-        //                 <option value="large_suv">Large SUV</option>
-        //                 <option value="truck">Truck</option>
-        //                 <option value="compact_car">Compact Car</option>
-        //                 <option value="midsize_car">Midsize Car</option>
-        //                 <option value="electric">Electric Car</option>
-        //             </select><br/>
-        //             <input onChange={this.onFormChange} className="car-mpg" name="mpg" type="text" placeholder="Enter MPG..."/><br/>
-        //             <select onChange={this.onFormChange} className="car-charge" name="chargeAtHome">
-        //                 <option value="">Charge at home?</option>
-        //                 <option value="true">Yes</option>
-        //                 <option value="false">No</option>
-        //             </select><br/>
-        //             <input className="car-submit" name="submit" type="submit" value="See Recommendations"/>
-        //         </form>
-        //     </>
-        // )
         return(
             <div className="new-form">
                 <h3>Car Sustainability Helper</h3>

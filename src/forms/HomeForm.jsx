@@ -2,7 +2,6 @@ import React from 'react'
 import {Redirect} from 'react-router-dom'
 import {Form, Button} from 'react-bootstrap';
 import '../stylesheets/form.css'
-import HomeRecommendations from '../containers/HomeRecommendations.jsx'
 
 class HomeForm extends React.Component{
     
@@ -136,54 +135,7 @@ class HomeForm extends React.Component{
                     See Recommendations
                 </Button>
             </Form>
-                {/* <input onChange={this.onFormChange} className="home-name" name="name" type="text" placeholder="Enter Name..."/><br/>
-                <input onChange={this.onFormChange} className="home-email" name="email" type="text" placeholder="Enter Email..."/><br/> */}
-                {/* <select onChange={this.onFormChange} className="home-type" name="typeOfHome">
-                    <option value="">Please Select...</option>
-                    <option value="condo">Condo</option>
-                    <option value="townhouse">Townhouse</option>
-                    <option value="detached house">Detached House</option>
-                </select><br/> */}
-                {/* <select onChange={this.onFormChange} className="home-solar" name="solars">
-                    <option value="">Solar Panels?</option>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select><br/> */}
-                {/* <select onChange={this.onFormChange} className="home-water-heater" name="waterHeater">
-                    <option value="">Type of Water Heater...</option>
-                    <option value="tank_natural_gas">Natural Gas Tank</option>
-                    <option value="tank_electric">Electric Tank</option>
-                    <option value="tankless_natural_gas">Tankless Natural Gas</option>
-                    <option value="heat_pump">Hybrid(Heat Pump)</option>
-                </select><br/> */}
-                {/* <input onChange={this.onFormChange} className="home-applicances" name="appliances" type="text" placeholder="Applicances Age..."/><br/> */}
-                {/* <select onChange={this.onFormChange} className="home-flow" name="lowFlow">
-                    <option value="">Low Flow Water Fixtures...</option>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select><br/> */}
-                {/* <select onChange={this.onFormChange} className="home-windows" name="windows">
-                    <option value="">Type of Windows...</option>
-                    <option value="single_pane">Single Pane</option>
-                    <option value="double_pane">Double Pane</option>
-                    <option value="triple_pane">Triple Pane</option>
-                </select><br/> */}
-                {/* <select onChange={this.onFormChange} className="home-heater" name="heater">
-                    <option value="">Type of Heater...</option>
-                    <option value="baseboard">Baseboard Heater</option>
-                    <option value="natural_gas_furnace">Natural Gas Heater</option>
-                    <option value="heat_pump">Heat Pump Heater</option>
-                    <option value="mini_split">Mini Split Heater</option>
-                    <option value="geothermal">Geo Thermal Heater</option>
-                </select><br/> */}
-                {/* <select onChange={this.onFormChange} className="home-lights" name="lightBulbs">
-                    <option value="">Home Lighting...</option>
-                    <option value="led">LED Bulbs</option>
-                    <option value="fluorescent">Fluorescent Bulbs</option>
-                    <option value="incandescent">Incandescent Bulbs</option>
-                </select><br/> */}
-                {/* <input className="home-submit" name="submit" type="submit" value="See Recommendations"/>
-            </form> */}
+                
             </div>
         )
     }

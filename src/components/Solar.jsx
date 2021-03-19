@@ -1,9 +1,8 @@
 import React from 'react';
 import '../stylesheets/upgrades.css'
-
 import { connect } from 'react-redux'
 import {addCost, subCost} from '../actions/upgradesActions.jsx'
-import DisplayTotal from './DisplayTotal.jsx';
+
 
 class Solar extends React.Component{
 
@@ -75,6 +74,5 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(null, mapDispatchToProps)(Solar);
 
-//() => this.props.dispatch({type: "MORE_MONEY", payload: {cost: this.state.cost, savings: this.state.savings}})
-//onClick={() => this.props.subCost(cost, savings)}
+
 

@@ -2,7 +2,6 @@ import React from 'react';
 import '../stylesheets/upgrades.css';
 import { connect } from 'react-redux'
 import {addCost, subCost} from '../actions/upgradesActions.jsx'
-//import {addSolar} from './actions/upgradesActions.jsx'
 
 class Heater extends React.Component{
 

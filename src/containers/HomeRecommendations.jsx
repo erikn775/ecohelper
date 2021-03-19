@@ -29,8 +29,8 @@ class HomeRecommendations extends React.Component{
     }
 
     componentDidMount(){
-        let user_id = this.props.location.state.newId
-        fetch(`http://127.0.0.1:3000/home_info/${user_id}`)
+        //let user_id = this.props.location.state.newId
+        fetch(`http://127.0.0.1:3000/home_info/4`)
         .then(response => response.json())
         .then(data => {
             this.setState({
