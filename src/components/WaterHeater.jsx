@@ -58,7 +58,7 @@ class WaterHeater extends React.Component{
         let clicked = this.state.clicked
         return(
             <div onClick={clicked ? this.subtractCost : this.addToCost} className="water-heater-container">
-                <h3 className="water-heater-title">{this.state.heaterType} Water Heater</h3>
+                <h3 className="water-heater-title">{this.state.heaterType} Water Heater 💧🔥</h3>
                 <p>Cost: ${this.state.cost} Potential Savings: ${this.state.savings}</p>
             </div>
         )

@@ -58,7 +58,7 @@ class LightBulbs extends React.Component{
         let clicked = this.state.clicked
         return(
             <div onClick={clicked ? this.subtractCost : this.addToCost} className="light-container">
-                <h3 className="light-title">{this.state.light} light bulbs</h3>
+                <h3 className="light-title">{this.state.light} Light Bulbs 💡</h3>
                 <p>Cost: ${this.state.cost} Potential Savings: ${this.state.savings}</p>
             </div>
         )

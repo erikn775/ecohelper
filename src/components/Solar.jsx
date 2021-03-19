@@ -58,8 +58,8 @@ class Solar extends React.Component{
         let clicked = this.state.clicked
         return(
             <div onClick={clicked ? this.subtractCost : this.addToCost} className="solar-container">
-                <h3 className="solar-title">{this.state.size} Solar Panel System</h3>
-                <p>Cost: ${this.state.cost} Potential Savings: ${this.state.savings}</p>
+                <h3 className="solar-title">{this.state.size} Solar Panel System 🌞</h3>
+                <h3>Cost: ${this.state.cost} Potential Savings: ${this.state.savings}</h3>
                 
             </div>
         )

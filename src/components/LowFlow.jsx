@@ -58,7 +58,7 @@ class LowFlow extends React.Component{
         let clicked = this.state.clicked
         return(
             <div onClick={clicked ? this.subtractCost : this.addToCost} className="lowFlow-container">
-                <h3 className="lowFlow-title">{this.state.faucetType} Faucets</h3>
+                <h3 className="lowFlow-title">{this.state.faucetType} Faucets 🚿</h3>
                 <p>Cost: ${this.state.cost} Potential Savings: ${this.state.savings}</p>
             </div>
         )

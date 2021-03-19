@@ -11,6 +11,7 @@ import Windows from './Windows.jsx'
 import Appliances from './Appliances.jsx'
 import LowFlow from './LowFlow.jsx'
 import ReviewForm from './ReviewForm.jsx'
+import NoChanges from './NoChanges.jsx'
 
 class HomeRecommendations extends React.Component{
 
@@ -49,7 +50,7 @@ class HomeRecommendations extends React.Component{
     displayChoice = () => {
         const componentArray = []
         if (this.state.typeOfHome === 'detached house' && this.state.solars === false ){
-                componentArray.push(<Solar unit={1}/>, <Solar unit={2}/>) 
+            componentArray.push(<Solar unit={1}/>, <Solar unit={2}/>) 
         }
         if (this.state.waterHeater === 'tank_natural_gas'){
             componentArray.push(<WaterHeater unit={3}/>)
@@ -76,7 +77,7 @@ class HomeRecommendations extends React.Component{
             componentArray.push(<LightBulbs unit={1}/>)
         }
         if(componentArray.length === 0){
-            return //<Your Great Component>
+            return <NoChanges/>
         }
         else{
             return componentArray
@@ -89,7 +90,7 @@ class HomeRecommendations extends React.Component{
             <div>
                 <div className="robot">
                     <h3>Hello! {this.state.name}</h3>
-                    <h3>Our robots have spoken!</h3>
+                    <h3>Our robots have spoken</h3>
                     <DisplayTotal/>
                 </div>
                 <div className="home-recommendation">
