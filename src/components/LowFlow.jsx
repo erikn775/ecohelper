@@ -1,5 +1,5 @@
 import React from 'react';
-import '../upgrades.css'
+import '../stylesheets/upgrades.css'
 //import {addSolar} from './actions/upgradesActions.jsx'
 import { connect } from 'react-redux'
 import {addCost, subCost} from '../actions/upgradesActions.jsx'

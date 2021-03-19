@@ -3,7 +3,7 @@ import ElectricCar from '../components/ElectricCar.jsx'
 import HybridCar from '../components/HybridCar.jsx'
 import NoCar from '../components/NoCar.jsx'
 import ReviewForm from '../forms/ReviewForm.jsx'
-import '../electric.css'
+import '../stylesheets/electric.css'
 
 
 class CarRecommendations extends React.Component{

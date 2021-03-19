@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'rsuite';
-import '../tips.css'
+import '../stylesheets/tips.css'
 
 class TipsCarousel extends React.Component {
     state = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReviewCard from '../components/ReviewCard.jsx'
-import '../ReviewCard.css'
+import '../stylesheets/ReviewCard.css'
 
 class ReviewContainer extends React.Component {
     

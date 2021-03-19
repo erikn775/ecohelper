@@ -1,7 +1,7 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
 import {Form, Button} from 'react-bootstrap';
-import '../form.css'
+import '../stylesheets/form.css'
 import HomeRecommendations from '../containers/HomeRecommendations.jsx'
 
 class HomeForm extends React.Component{

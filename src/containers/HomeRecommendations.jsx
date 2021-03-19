@@ -4,7 +4,7 @@ import Heater from '../components/Heater.jsx'
 import WaterHeater from '../components/WaterHeater.jsx'
 import { connect } from 'react-redux'
 import {addCost, subCost} from '../actions/upgradesActions.jsx.jsx'
-import '../Home.css'
+import '../stylesheets/Home.css'
 import DisplayTotal from '../components/DisplayTotal.jsx';
 import LightBulbs from '../components/LightBulbs.jsx'
 import Windows from '../components/Windows.jsx'

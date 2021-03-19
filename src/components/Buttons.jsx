@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { ButtonToolbar, Button } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
-import '../button.css'
+import '../stylesheets/button.css'
 
 export default function Buttons(){
     return(

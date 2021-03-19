@@ -1,5 +1,5 @@
 import React from 'react'
-import '../ReviewCard.css'
+import '../stylesheets/ReviewCard.css'
 
 class ReviewCard extends React.Component{
 

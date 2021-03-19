@@ -1,5 +1,5 @@
 import React from 'react'
-import '../electric.css'
+import '../stylesheets/electric.css'
 
 export default function ElectricCar(){
     return(
