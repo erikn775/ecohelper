@@ -2,12 +2,12 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header.jsx'
 import ReviewContainer from './containers/ReviewContainer.jsx';
-import TipsCarousel from'./containers/TipsCarousel.jsx'
+import TipsCarousel from'./components/TipsCarousel.jsx'
 import {Switch, Route} from "react-router-dom";
-import HomeForm from './components/HomeForm.jsx'
-import HomeRecommendations from './components/HomeRecommendations';
-import CarRecommendations from './components/CarRecommendations';
-import CarForm from './components/CarForm.jsx'
+import HomeForm from './forms/HomeForm.jsx'
+import HomeRecommendations from './containers/HomeRecommendations';
+import CarRecommendations from './containers/CarRecommendations';
+import CarForm from './forms/CarForm.jsx'
 import Buttons from './components/Buttons.jsx'
 
 class App extends React.Component {

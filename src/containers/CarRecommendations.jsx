@@ -1,8 +1,8 @@
 import React from 'react';
-import ElectricCar from './ElectricCar.jsx'
-import HybridCar from './HybridCar.jsx'
-import NoCar from './NoCar.jsx'
-import ReviewForm from './ReviewForm.jsx'
+import ElectricCar from '../components/ElectricCar.jsx'
+import HybridCar from '../components/HybridCar.jsx'
+import NoCar from '../components/NoCar.jsx'
+import ReviewForm from '../forms/ReviewForm.jsx'
 import '../electric.css'
 
 

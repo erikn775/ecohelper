@@ -1,17 +1,17 @@
 import React from 'react';
-import Solar from './Solar.jsx'
-import Heater from './Heater.jsx'
-import WaterHeater from './WaterHeater.jsx'
+import Solar from '../components/Solar.jsx'
+import Heater from '../components/Heater.jsx'
+import WaterHeater from '../components/WaterHeater.jsx'
 import { connect } from 'react-redux'
-import {addCost, subCost} from '../actions/upgradesActions.jsx'
+import {addCost, subCost} from '../actions/upgradesActions.jsx.jsx'
 import '../Home.css'
-import DisplayTotal from './DisplayTotal.jsx';
-import LightBulbs from './LightBulbs.jsx'
-import Windows from './Windows.jsx'
-import Appliances from './Appliances.jsx'
-import LowFlow from './LowFlow.jsx'
-import ReviewForm from './ReviewForm.jsx'
-import NoChanges from './NoChanges.jsx'
+import DisplayTotal from '../components/DisplayTotal.jsx';
+import LightBulbs from '../components/LightBulbs.jsx'
+import Windows from '../components/Windows.jsx'
+import Appliances from '../components/Appliances.jsx'
+import LowFlow from '../components/LowFlow.jsx'
+import ReviewForm from '../forms/ReviewForm.jsx'
+import NoChanges from '../components/NoChanges.jsx'
 
 class HomeRecommendations extends React.Component{
 
@@ -29,8 +29,8 @@ class HomeRecommendations extends React.Component{
     }
 
     componentDidMount(){
-        //let user_id = this.props.location.state.newId
-        fetch(`http://127.0.0.1:3000/home_info/4`)
+        let user_id = this.props.location.state.newId
+        fetch(`http://127.0.0.1:3000/home_info/${user_id}`)
         .then(response => response.json())
         .then(data => {
             this.setState({
@@ -95,7 +95,7 @@ class HomeRecommendations extends React.Component{
                 </div>
                 <div className="home-recommendation">
                     <h3 className="home-recommendation-title">Recommendations</h3>
-                    <p className="home-recommendation-content">Chose any to get a price estimate for your home</p>
+                    <p className="home-recommendation-content">Click any to get a price estimate for your home</p>
                     {this.displayChoice()}
                 </div>
                 <div>
