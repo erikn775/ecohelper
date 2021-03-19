@@ -2,7 +2,6 @@ import React from 'react';
 import '../upgrades.css'
 import { connect } from 'react-redux'
 import {addCost, subCost} from '../actions/upgradesActions.jsx'
-import DisplayTotal from './DisplayTotal.jsx';
 
 class Appliances extends React.Component{
 

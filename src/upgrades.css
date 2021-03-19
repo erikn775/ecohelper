@@ -4,9 +4,9 @@
     margin: 10px;
     text-align: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 400px;
-    height: 100px;
-    float: left;
+    width: 600px;
+    height: 200px;
+    
 }
 
 .solar-container:hover {
@@ -16,12 +16,11 @@
     cursor: pointer;
 }
 
-
-
 .solar-title {
     font-size: 20px;
     padding-bottom: 25px;
 }
+
 
 .heater-container {
     background-color: whitesmoke;
@@ -29,9 +28,9 @@
     margin: 10px;
     text-align: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 400px;
-    height: 100px;
-    float: left;
+    width: 600px;
+    height: 200px;
+    
 }
 
 .heater-container:hover {
@@ -52,9 +51,9 @@
     margin: 10px;
     text-align: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 400px;
-    height: 100px;
-    float: left;
+    width: 600px;
+    height: 200px;
+    
 }
 
 .water-heater-container:hover {
@@ -75,9 +74,9 @@
     margin: 10px;
     text-align: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 400px;
-    height: 100px;
-    float: left;
+    width: 600px;
+    height: 200px;
+    
 }
 
 .light-container:hover {
@@ -98,9 +97,9 @@
     margin: 10px;
     text-align: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 400px;
-    height: 100px;
-    float: left;
+    width: 600px;
+    height: 200px;
+    
 }
 
 .window-container:hover {
@@ -121,9 +120,9 @@
     margin: 10px;
     text-align: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 400px;
-    height: 100px;
-    float: left;
+    width: 600px;
+    height: 200px;
+    
 }
 
 .appliance-container:hover {
@@ -144,9 +143,9 @@
     margin: 10px;
     text-align: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 400px;
-    height: 100px;
-    float: left;
+    width: 600px;
+    height: 200px;
+    
 }
 
 .lowFlow-container:hover {

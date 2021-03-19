@@ -1,5 +1,6 @@
 import React from 'react';
 import '../upgrades.css'
+
 import { connect } from 'react-redux'
 import {addCost, subCost} from '../actions/upgradesActions.jsx'
 import DisplayTotal from './DisplayTotal.jsx';
@@ -59,6 +60,7 @@ class Solar extends React.Component{
             <div onClick={clicked ? this.subtractCost : this.addToCost} className="solar-container">
                 <h3 className="solar-title">{this.state.size} Solar Panel System</h3>
                 <p>Cost: ${this.state.cost} Potential Savings: ${this.state.savings}</p>
+                
             </div>
         )
     }
