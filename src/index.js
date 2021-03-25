@@ -6,11 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from 'react-router-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import upgradeReducer from './reducers/upgradeReducer.jsx'
+//import upgradeReducer from './reducers/upgradeReducer.jsx'
 import thunk from 'redux-thunk'
+import reducer from './reducers/combineReducer.jsx'
 
+const store = createStore(reducer, applyMiddleware(thunk))
 
-const store = createStore(upgradeReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>

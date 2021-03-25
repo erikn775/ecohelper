@@ -13,8 +13,8 @@ function DisplayTotal(props) {
 
 const mapStateToProps = (state) => {
   return {
-    totalCost: state.totalCost,
-    totalSavings: state.totalSavings
+    totalCost: state.upgrades.totalCost,
+    totalSavings: state.upgrades.totalSavings
   }
 }
 

@@ -1,31 +1,36 @@
 import React from 'react';
 import ReviewCard from '../components/ReviewCard.jsx'
 import '../stylesheets/ReviewCard.css'
+import {fetchReviewData} from '../actions/reviewActions.jsx'
+import { connect } from 'react-redux'
 
 class ReviewContainer extends React.Component {
     
-    state = {
-        reviews: []
-        }
-    
-    
     componentDidMount(){
-        // fetch('http://127.0.0.1:3000/reviews')
-        //     .then(response => response.json())
-        //     .then(reviewData => {
-        //         this.setState({
-        //             reviews: reviewData
-        //         })
-        //     })
+        this.props.fetchReviewData()
     }
 
     render(){
+        
         return(
             <>
-            <h2 className="review-header">Testimonials</h2>
-            {this.state.reviews.map(review => <ReviewCard key={review.id} name={review.name} content={review.content} rating={review.rating}/>)}
+                <h2 className="review-header">Testimonials</h2>
+                {this.props.reviews.map(review => <ReviewCard key={review.id} name={review.name} content={review.content} rating={review.rating}/>)}
             </>
         )
     }
 }
-export default ReviewContainer;
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchReviewData: () => dispatch(fetchReviewData())
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+      reviews: state.reviews.reviews
+    }
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(ReviewContainer);
