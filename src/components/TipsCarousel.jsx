@@ -1,31 +1,35 @@
 import React from 'react';
 import { Carousel } from 'rsuite';
-import '../stylesheets/tips.css'
+import '../stylesheets/tips.css';
+import { connect } from 'react-redux';
+import {fetchTipData} from '../actions/tipsActions.jsx'
 
 class TipsCarousel extends React.Component {
-    state = {
-        tips: []
-    }
-
+    
     componentDidMount(){
-        fetch('http://127.0.0.1:3000/tips')
-            .then(response => response.json())
-            .then(tipsData => {
-                this.setState({
-                    tips: tipsData
-                })
-            })
+        this.props.fetchTipData()
     }
 
     render(){
         return(
             <>
             <Carousel autoplay className="custom-slider">
-                {this.state.tips.map(tip => 
-                    <img src={tip.content} /> )}
+                {this.props.tips.map(tip => <img src={tip.content} /> )}
             </Carousel>
             </>
         )
     }
 }
-export default TipsCarousel
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchTipData: () => dispatch(fetchTipData())
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+      tips: state.tips.tips
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(TipsCarousel)
