@@ -7,7 +7,8 @@ import '../stylesheets/form.css'
 
 
 class CarForm extends React.Component{
-    state ={
+    
+    state = {
         name: null,
         email: null,
         ownACar: null,

@@ -3,7 +3,6 @@ import Solar from '../components/Solar.jsx'
 import Heater from '../components/Heater.jsx'
 import WaterHeater from '../components/WaterHeater.jsx'
 import { connect } from 'react-redux'
-import {addCost, subCost} from '../actions/upgradesActions.jsx.jsx'
 import '../stylesheets/Home.css'
 import DisplayTotal from '../components/DisplayTotal.jsx';
 import LightBulbs from '../components/LightBulbs.jsx'
@@ -29,8 +28,8 @@ class HomeRecommendations extends React.Component{
     }
 
     componentDidMount(){
-        //let user_id = this.props.location.state.newId
-        fetch(`http://127.0.0.1:3000/home_info/4`)
+        let user_id = this.props.location.state.newId
+        fetch(`http://127.0.0.1:3000/home_info/${user_id}`)
         .then(response => response.json())
         .then(data => {
             this.setState({
@@ -73,7 +72,7 @@ class HomeRecommendations extends React.Component{
         if(this.state.heater === 'natural_gas_furnace'){
             componentArray.push(<Heater unit={2}/>)
         }
-        if(this.state.lightBulbs != 'led'){
+        if(this.state.lightBulbs !== 'led'){
             componentArray.push(<LightBulbs unit={1}/>)
         }
         if(componentArray.length === 0){

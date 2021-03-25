@@ -10,13 +10,13 @@ class ReviewContainer extends React.Component {
     
     
     componentDidMount(){
-        fetch('http://127.0.0.1:3000/reviews')
-            .then(response => response.json())
-            .then(reviewData => {
-                this.setState({
-                    reviews: reviewData
-                })
-            })
+        // fetch('http://127.0.0.1:3000/reviews')
+        //     .then(response => response.json())
+        //     .then(reviewData => {
+        //         this.setState({
+        //             reviews: reviewData
+        //         })
+        //     })
     }
 
     render(){
