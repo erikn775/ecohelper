@@ -1,4 +1,4 @@
-export default function reviewReducer(state = {tips: []}, action){
+export default function tipsReducer(state = {tips: []}, action){
     switch(action.type){
         case "STORE_TIPS":
             return {...state, tips: action.payload}

@@ -21,7 +21,7 @@ class App extends React.Component {
           <Route exact path="/home/recommendations" render={(props) => <HomeRecommendations {...props} />}/>
           <Route exact path="/car/new" component={() => <CarForm/>}/>
           <Route exact path="/car/recommendations" render={(props) => <CarRecommendations {...props} />}/>
-        </Switch>
+        </Switch> 
       </div>
     )
   }

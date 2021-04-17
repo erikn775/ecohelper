@@ -3,6 +3,10 @@ import '../stylesheets/ReviewCard.css'
 
 class ReviewCard extends React.Component{
 
+    state = {
+        like: 0
+    }
+
     stars = () => {
         if(this.props.rating === 5){
             return "⭐⭐️⭐️⭐️⭐️"
